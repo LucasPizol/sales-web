@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using SalesWebMVC.Models;
 using System.Diagnostics;
+using SalesWebMVC.Models.ViewModel;
 
 namespace SalesWebMVC.Controllers {
     public class HomeController : Controller {
@@ -15,6 +16,11 @@ namespace SalesWebMVC.Controllers {
         }
 
         public IActionResult Privacy() {
+            return View();
+        }
+
+        public IActionResult About() {
+            ViewData["email"] = "lukaspizoll@gmal.com";
             return View();
         }
 
